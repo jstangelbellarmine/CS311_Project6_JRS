@@ -1,0 +1,111 @@
+<!--
+--This HTML document creates a web application that can dynamically sum all 
+--assets and liabilities and then tells the total position.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balance Sheet Calculator</title>
+  <!--
+  -- Task: imports both the programmer-created CSS code but also uses
+  --Bulma framework, linked below.
+  -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<!--
+--The body consists of a header, two columns with interactive buttons and fields,
+--and a footer.
+-->
+<body>
+  <header class="header">
+    <h1>Bellarmine Finances - Balance Sheet Calculator</h1>
+  </header>
+
+<!--
+  --The main section of the program is divided into two columns (left and right).
+  -- Each grid column contains several interaction sections, which interact with
+  --methods written in a JavaScript code.
+  -->
+  <main class="main-content">
+
+    <!--
+    --Task: creates 3 sections on the left side, named Current Assets, Investment
+    --Property and Equipment, and Intangibles. These classes interact with a CSS 
+    --sheet as well as JavaScript.
+    -->
+    <div class="left-column">
+      <div class="section-box assets-section">
+        <h3 class="title is-4 has-text-success">Assets</h3>
+        <h4 class="subtitle is-6">Current Assets</h4>
+        <button class="button is-success mb-3" id="add-assets-btn">Add Current Assets</button>
+        <div id="assets-form"></div>
+        <h4 class="subtitle is-6">Total Current Assets: $<span id="total-assets">0</span></h4>
+      </div>
+
+      <div class="section-box investment-section">
+        <h3 class="title is-4 has-text-info">Investment Property and Equipment</h3>
+        <button class="button is-info mb-2" id="add-investment-btn">Add Investment Property & Equipment</button>
+        <div id="investment-form"></div>
+        <h4 class="subtitle is-6">Total Investment Property and Equipment: $<span id="total-investment">0</span></h4>
+      </div>
+
+      <div class="section-box intangibles-section">
+        <h3 class="title is-4 has-text-warning">Intangibles</h3>
+        <button class="button is-warning mb-2" id="add-intangibles-btn">Add Intangibles</button>
+        <div id="intangibles-form"></div>
+        <h4 class="subtitle is-6">Total Intangibles: $<span id="total-intangibles">0</span></h4>
+      </div>
+    </div>
+
+    <!--
+    --Task: creates 3 sections on the right side, named Current Liabilities, Long-Term
+    --Liabilities, and Total Position. The first two work much the same as the left-sided 
+    --sections, but the Total Position section adds and subtracts all assets and liabilities. 
+    -->
+    <div class="right-column">
+      
+      <div class="section-box liabilities-section">
+        <h3 class="title is-4 has-text-danger">Current Liabilities</h3>
+        <button class="button is-danger mb-3" id="add-liabilities-btn">Add Current Liabilities</button>
+        <div id="liabilities-form"></div>
+        <h4 class="subtitle is-6">Total Current Liabilities: $<span id="total-liabilities">0</span></h4>
+      </div>
+
+      <div class="section-box long-term-liabilities-section">
+        <h3 class="title is-4 has-text-danger">Long-Term Liabilities</h3>
+        <button class="button is-danger mb-3" id="add-long-term-btn">Add Long-Term Liabilities</button>
+        <div id="long-term-form"></div>
+        <h4 class="subtitle is-6">Total Long-Term Liabilities: $<span id="total-long-term">0</span></h4>
+      </div>
+
+      <div class="section-box total-position-section">
+        <h3 class="title is-4 has-text-info">Total Position</h3>
+        <button class="button is-primary mb-3" id="calculate-position-btn">Calculate Position</button>
+        <div id="total-position-form"></div>
+        <h4 class="subtitle is-6">Total Assets: $<span id="total-assets-summary">0</span></h4>
+        <h4 class="subtitle is-6">Total Liabilities: $<span id="total-liabilities-summary">0</span></h4>
+        <h4 class="subtitle is-6">Position: $<span id="total-position-summary">0</span></h4>
+      </div>
+    </div>
+  </main>
+
+  <!-- 
+  --Task: creates a footer on the page. 
+  -->
+  <footer class="footer">
+    <p>© Bellarmine University 2024</p>
+  </footer>
+
+  <!-- 
+  --Task: imports the methods and code from my JavaScript file.
+  -->
+  <script src="main.js"></script>
+  
+</body>
+
+</html>

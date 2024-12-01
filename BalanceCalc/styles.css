@@ -1,0 +1,123 @@
+/*
+/This CSS file contains modifications to style
+/this page as closely to the assignment requirements
+/as possible. I also used the Bulma framework to flesh 
+/out the rest of my design.
+*/
+
+
+body
+ {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* 
+/Task: modifies the header so it looks like project requirement. 
+*/
+
+.header 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8B0000;
+  height: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+/* 
+/Task: modifies the footer so it looks like project requirement. 
+*/
+.footer 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8B0000;
+  height: 50px; 
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+/* 
+/Task: modifies a grid framework for the main content, modifying it to expand 
+/fillable space and adjust size. It also allows scrolling when necessary.  
+*/
+.main-content
+ {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  background-color: gold;
+  flex-grow: 1; 
+  padding: 1rem; 
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+
+/* 
+/Task: modifies a the boxes in the grid in the main content, setting a 
+/fixed height for all sections. 
+*/
+.section-box 
+{
+  background-color: #fff700;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 250px; 
+  overflow: hidden;
+}
+
+/* 
+/Task: modifies row to stack vertically 
+*/
+.form-row 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+/* 
+/Task: modifies text field for each label 
+*/
+label 
+{
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+/* 
+/Task: modifies input field for the numbers input
+*/
+input.input {
+  width: 20%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+}
+
+/* 
+/Task: modifies the button 
+*/
+button.button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
